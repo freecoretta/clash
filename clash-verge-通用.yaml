@@ -17,6 +17,8 @@ proxy-groups:
   - 🇹🇼 台湾
   - 🇸🇬 新加坡
   - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
   - 🌏 台日
   - 🌏 马来越南
   - 🌏 台日新韩马
@@ -40,6 +42,8 @@ proxy-groups:
   - 🇹🇼 台湾
   - 🇸🇬 新加坡
   - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
   - 🌏 台日
   - 🌏 马来越南
   - 🌏 台日新韩马
@@ -47,88 +51,100 @@ proxy-groups:
   - ⚡ 自动选择
 - name: 🔍 Google YouTube
   type: select
-  proxies:/n  - 🇭🇰 香港
+  proxies:
+  - 🇭🇰 香港
   - 🇯🇵 日本
   - 🇰🇷 韩国
   - 🇹🇼 台湾
   - 🇸🇬 新加坡
   - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
   - 🌏 台日
   - 🌏 马来越南
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
-
 - name: 🤖 ChatGPT Gemini
   type: select
-  proxies:/n  - 🇭🇰 香港
+  proxies:
+  - 🇭🇰 香港
   - 🇯🇵 日本
   - 🇰🇷 韩国
   - 🇹🇼 台湾
   - 🇸🇬 新加坡
   - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
   - 🌏 台日
   - 🌏 马来越南
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
-
 - name: 🎬 流媒体
   type: select
-  proxies:/n  - 🇭🇰 香港
+  proxies:
+  - 🇭🇰 香港
   - 🇯🇵 日本
   - 🇰🇷 韩国
   - 🇹🇼 台湾
   - 🇸🇬 新加坡
   - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
   - 🌏 台日
   - 🌏 马来越南
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
-
 - name: 📱 WhatsApp Telegram
   type: select
-  proxies:/n  - 🇭🇰 香港
+  proxies:
+  - 🇭🇰 香港
   - 🇯🇵 日本
   - 🇰🇷 韩国
   - 🇹🇼 台湾
   - 🇸🇬 新加坡
   - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
   - 🌏 台日
   - 🌏 马来越南
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
-
 - name: 💼 LinkedIn
   type: select
-  proxies:/n  - 🇭🇰 香港
+  proxies:
+  - 🇭🇰 香港
   - 🇯🇵 日本
   - 🇰🇷 韩国
   - 🇹🇼 台湾
   - 🇸🇬 新加坡
   - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
   - 🌏 台日
   - 🌏 马来越南
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
-
 - name: 🎵 TikTok
   type: select
-  proxies:/n  - 🇭🇰 香港
+  proxies:
+  - 🇭🇰 香港
   - 🇯🇵 日本
   - 🇰🇷 韩国
   - 🇹🇼 台湾
   - 🇸🇬 新加坡
   - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
   - 🌏 台日
   - 🌏 马来越南
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
-
 - name: ⚡ 自动选择
   type: url-test
   include-all: true
@@ -181,6 +197,22 @@ proxy-groups:
   include-all: true
   exclude-type: direct
   filter: (?i)(美|us|unitedstates|united states)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 🇻🇳 越南
+  type: url-test
+  include-all: true
+  exclude-type: direct
+  filter: (?i)(越|vn|vietnam)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 🇲🇾 马来西亚
+  type: url-test
+  include-all: true
+  exclude-type: direct
+  filter: (?i)(马|malaysia|malay)
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
