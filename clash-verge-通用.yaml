@@ -1,300 +1,431 @@
-# Clash Verge Universal Config
-# 通用版:使用 include-all + filter 自动适配任何订阅
-# 地区组按节点名字自动筛选,换订阅/机场不用改配置
-#
-# 用法:
-#   1. Verge → Profiles → 导入订阅(任意机场)
-#   2. 把这个文件设为 merge 子模块 或 完整配置
-#   3. 节点自动按名字匹配到对应地区组
+# Clash Verge Universal Config (v2 - rule-providers)
+# 通用版: include-all + filter 自动适配任何订阅
+# 规则源: blackmatrix7 + Loyalsoldier (与 Clash-Full.ini 保持一致)
 #
 mixed-port: 7890
 allow-lan: false
 mode: rule
 log-level: warning
 ipv6: false
-
 proxy-groups:
-  - name: 🔀 手动选择
-    type: select
-    proxies:
-      - 🇭🇰 香港
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇺🇸 美国
-      - 🌏 台日
-      - 🌏 马来越南
-      - 🌏 台日新韩马
-      - 🌍 其他地区
-      - ⚡ 自动选择
-      - 📂 默认
-      - 🔍 Google YouTube
-      - 🤖 ChatGPT Gemini
-      - 📱 WhatsApp Telegram
-      - 💼 LinkedIn
-      - 🎵 TikTok
-      - DIRECT
+- name: 🔀 手动选择
+  type: select
+  proxies:
+  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
+  - 📂 默认
+  - 🔍 Google YouTube
+  - 🤖 ChatGPT Gemini
+  - 🎬 流媒体
+  - 📱 WhatsApp Telegram
+  - 💼 LinkedIn
+  - 🎵 TikTok
+  - DIRECT
+  - REJECT
+- name: 📂 默认
+  type: select
+  proxies:
+  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
+- name: 🔍 Google YouTube
+  type: select
+  proxies:/n  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
 
-  - name: 📂 默认
-    type: select
-    proxies:
-      - 🇭🇰 香港
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇺🇸 美国
-      - 🌏 台日
-      - 🌏 马来越南
-      - 🌏 台日新韩马
-      - 🌍 其他地区
-      - ⚡ 自动选择
+- name: 🤖 ChatGPT Gemini
+  type: select
+  proxies:/n  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
 
-  - name: 🤖 ChatGPT Gemini
-    type: select
-    proxies:
-      - 🇭🇰 香港
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇺🇸 美国
-      - 🌏 台日
-      - 🌏 马来越南
-      - 🌏 台日新韩马
-      - 🌍 其他地区
-      - ⚡ 自动选择
+- name: 🎬 流媒体
+  type: select
+  proxies:/n  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
 
-  - name: 📱 WhatsApp Telegram
-    type: select
-    proxies:
-      - 🇭🇰 香港
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇺🇸 美国
-      - 🌏 台日
-      - 🌏 马来越南
-      - 🌏 台日新韩马
-      - 🌍 其他地区
-      - ⚡ 自动选择
+- name: 📱 WhatsApp Telegram
+  type: select
+  proxies:/n  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
 
-  - name: 💼 LinkedIn
-    type: select
-    proxies:
-      - 🇭🇰 香港
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇺🇸 美国
-      - 🌏 台日
-      - 🌏 马来越南
-      - 🌏 台日新韩马
-      - 🌍 其他地区
-      - ⚡ 自动选择
+- name: 💼 LinkedIn
+  type: select
+  proxies:/n  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
 
-  - name: 🔍 Google YouTube
-    type: select
-    proxies:
-      - 🇭🇰 香港
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇺🇸 美国
-      - 🌏 台日
-      - 🌏 马来越南
-      - 🌏 台日新韩马
-      - 🌍 其他地区
-      - ⚡ 自动选择
+- name: 🎵 TikTok
+  type: select
+  proxies:/n  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
 
-  - name: 🎵 TikTok
-    type: select
-    proxies:
-      - 🇭🇰 香港
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇺🇸 美国
-      - 🌏 台日
-      - 🌏 马来越南
-      - 🌏 台日新韩马
-      - 🌍 其他地区
-      - ⚡ 自动选择
-
-  # ===== 自动选择(全节点中选最快) =====
-  - name: ⚡ 自动选择
-    type: url-test
-    include-all: true
-    exclude-type: direct
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-
-  # ===== 地区组(自动适配任何订阅) =====
-  - name: 🇭🇰 香港
-    type: url-test
-    include-all: true
-    exclude-type: direct
-    filter: "(?i)港|hk|hongkong|hong kong"
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-
-  - name: 🇯🇵 日本
-    type: url-test
-    include-all: true
-    exclude-type: direct
-    filter: "(?i)日|jp|japan"
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-
-  - name: 🇰🇷 韩国
-    type: url-test
-    include-all: true
-    exclude-type: direct
-    filter: "(?i)韩|kr|korea"
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-
-  - name: 🇹🇼 台湾
-    type: url-test
-    include-all: true
-    exclude-type: direct
-    filter: "(?i)台|tw|taiwan"
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-
-  - name: 🇸🇬 新加坡
-    type: url-test
-    include-all: true
-    exclude-type: direct
-    filter: "(?i)(新|sg|singapore)"
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-
-  - name: 🇺🇸 美国
-    type: url-test
-    include-all: true
-    exclude-type: direct
-    filter: "(?i)美|us|unitedstates|united states"
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-
-  - name: 🌏 台日
-    type: url-test
-    include-all: true
-    exclude-type: direct
-    filter: "(?i)(台|tw|taiwan|日|jp|japan)"
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-
-  - name: 🌏 马来越南
-    type: url-test
-    include-all: true
-    exclude-type: direct
-    filter: "(?i)(越|vn|vietnam|马|malaysia|malay)"
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-
-  - name: 🌏 台日新韩马
-    type: url-test
-    include-all: true
-    exclude-type: direct
-    filter: "(?i)(台|tw|taiwan|日|jp|japan|新|sg|singapore|韩|kr|korea|马|malaysia|malay)"
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-
-  - name: 🌍 其他地区
-    type: url-test
-    include-all: true
-    exclude-type: direct
-    filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates|united states|韩|kr|korea|马|malaysia|malay|越|vn|vietnam)).*"
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-
+- name: ⚡ 自动选择
+  type: url-test
+  include-all: true
+  exclude-type: direct
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 🇭🇰 香港
+  type: url-test
+  include-all: true
+  exclude-type: direct
+  filter: (?i)(港|hk|hongkong|hong kong)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 🇯🇵 日本
+  type: url-test
+  include-all: true
+  exclude-type: direct
+  filter: (?i)(日|jp|japan)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 🇰🇷 韩国
+  type: url-test
+  include-all: true
+  exclude-type: direct
+  filter: (?i)(韩|kr|korea)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 🇹🇼 台湾
+  type: url-test
+  include-all: true
+  exclude-type: direct
+  filter: (?i)(台|tw|taiwan)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 🇸🇬 新加坡
+  type: url-test
+  include-all: true
+  exclude-type: direct
+  filter: (?i)(新|sg|singapore)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 🇺🇸 美国
+  type: url-test
+  include-all: true
+  exclude-type: direct
+  filter: (?i)(美|us|unitedstates|united states)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 🌏 台日
+  type: url-test
+  include-all: true
+  exclude-type: direct
+  filter: (?i)(台|tw|taiwan|日|jp|japan)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 🌏 马来越南
+  type: url-test
+  include-all: true
+  exclude-type: direct
+  filter: (?i)(越|vn|vietnam|马|malaysia|malay)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 🌏 台日新韩马
+  type: url-test
+  include-all: true
+  exclude-type: direct
+  filter: (?i)(台|tw|taiwan|日|jp|japan|新|sg|singapore|韩|kr|korea|马|malaysia|malay)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 🌍 其他地区
+  type: url-test
+  include-all: true
+  exclude-type: direct
+  filter: (?i)^(?!.*(?:港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates|united states|韩|kr|korea|马|malaysia|malay|越|vn|vietnam)).*
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+rule-providers:
+  OpenAI:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.list
+    path: ./ruleset/OpenAI.yaml
+    interval: 86400
+  Copilot:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.list
+    path: ./ruleset/Copilot.yaml
+    interval: 86400
+  Gemini:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.list
+    path: ./ruleset/Gemini.yaml
+    interval: 86400
+  Claude:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.list
+    path: ./ruleset/Claude.yaml
+    interval: 86400
+  Meta:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Meta/Meta.list
+    path: ./ruleset/Meta.yaml
+    interval: 86400
+  GitHub:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list
+    path: ./ruleset/GitHub.yaml
+    interval: 86400
+  TikTok:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.list
+    path: ./ruleset/TikTok.yaml
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list
+    path: ./ruleset/Telegram.yaml
+    interval: 86400
+  Twitter:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list
+    path: ./ruleset/Twitter.yaml
+    interval: 86400
+  WhatsApp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Whatsapp/Whatsapp.list
+    path: ./ruleset/WhatsApp.yaml
+    interval: 86400
+  Facebook:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.list
+    path: ./ruleset/Facebook.yaml
+    interval: 86400
+  Amazon:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Amazon/Amazon.list
+    path: ./ruleset/Amazon.yaml
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list
+    path: ./ruleset/Apple.yaml
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list
+    path: ./ruleset/Microsoft.yaml
+    interval: 86400
+  Google:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list
+    path: ./ruleset/Google.yaml
+    interval: 86400
+  Steam:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.list
+    path: ./ruleset/Steam.yaml
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list
+    path: ./ruleset/YouTube.yaml
+    interval: 86400
+  Disney:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.list
+    path: ./ruleset/Disney.yaml
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list
+    path: ./ruleset/Netflix.yaml
+    interval: 86400
+  HBO:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBO/HBO.list
+    path: ./ruleset/HBO.yaml
+    interval: 86400
+  Spotify:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.list
+    path: ./ruleset/Spotify.yaml
+    interval: 86400
+  LinkedIn:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/LinkedIn/LinkedIn.list
+    path: ./ruleset/LinkedIn.yaml
+    interval: 86400
+  Global:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.list
+    path: ./ruleset/Global.yaml
+    interval: 86400
+  China:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China.list
+    path: ./ruleset/China.yaml
+    interval: 86400
+  Lan:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.list
+    path: ./ruleset/Lan.yaml
+    interval: 86400
+  Proxy:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    path: ./ruleset/Proxy.yaml
+    interval: 86400
+  GFW:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
+    path: ./ruleset/GFW.yaml
+    interval: 86400
 rules:
-  - GEOIP,CN,DIRECT
-  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
-  - DOMAIN-KEYWORD,qq.com,DIRECT
-  - DOMAIN-KEYWORD,weixin,DIRECT
-  - DOMAIN-KEYWORD,weibo,DIRECT
-  - DOMAIN-KEYWORD,taobao,DIRECT
-  - DOMAIN-KEYWORD,alipay,DIRECT
-  - DOMAIN-KEYWORD,baidu,DIRECT
-  - DOMAIN-KEYWORD,bytedance,DIRECT
-  - DOMAIN-KEYWORD,douyin,DIRECT
-  - DOMAIN-SUFFIX,aliexpress.com,📂 默认
-  - DOMAIN-KEYWORD,alibaba,📂 默认
-  - DOMAIN-SUFFIX,1688.com,DIRECT
-  - DOMAIN-SUFFIX,amazon.com,📂 默认
-  - DOMAIN-SUFFIX,amazonaws.com,📂 默认
-  - DOMAIN-SUFFIX,amazon.co.jp,📂 默认
-  - DOMAIN-SUFFIX,amazon.co.uk,📂 默认
-  - DOMAIN-SUFFIX,amazon.de,📂 默认
-  - DOMAIN-SUFFIX,coupang.com,📂 默认
-  - DOMAIN-SUFFIX,naver.com,📂 默认
-  - DOMAIN-SUFFIX,ruten.com.tw,📂 默认
-  - DOMAIN-SUFFIX,whatsapp.com,📱 WhatsApp Telegram
-  - DOMAIN-SUFFIX,whatsapp.net,📱 WhatsApp Telegram
-  - IP-CIDR,91.108.4.0/22,📱 WhatsApp Telegram,no-resolve
-  - IP-CIDR,91.108.8.0/22,📱 WhatsApp Telegram,no-resolve
-  - IP-CIDR,91.108.12.0/22,📱 WhatsApp Telegram,no-resolve
-  - IP-CIDR,91.108.16.0/22,📱 WhatsApp Telegram,no-resolve
-  - IP-CIDR,91.108.20.0/22,📱 WhatsApp Telegram,no-resolve
-  - IP-CIDR,91.108.56.0/22,📱 WhatsApp Telegram,no-resolve
-  - IP-CIDR,149.154.160.0/20,📱 WhatsApp Telegram,no-resolve
-  - DOMAIN-SUFFIX,openai.com,🤖 ChatGPT Gemini
-  - DOMAIN-SUFFIX,chatgpt.com,🤖 ChatGPT Gemini
-  - DOMAIN-SUFFIX,claude.ai,🤖 ChatGPT Gemini
-  - DOMAIN-SUFFIX,anthropic.com,🤖 ChatGPT Gemini
-  - DOMAIN-SUFFIX,gemini.google.com,🤖 ChatGPT Gemini
-  - DOMAIN-SUFFIX,poe.com,🤖 ChatGPT Gemini
-  - DOMAIN-SUFFIX,perplexity.ai,🤖 ChatGPT Gemini
-  - DOMAIN-SUFFIX,midjourney.com,🤖 ChatGPT Gemini
-  - DOMAIN-KEYWORD,openai,🤖 ChatGPT Gemini
-  - DOMAIN-KEYWORD,chatgpt,🤖 ChatGPT Gemini
-  - DOMAIN-SUFFIX,twitter.com,📂 默认
-  - DOMAIN-SUFFIX,x.com,📂 默认
-  - DOMAIN-SUFFIX,facebook.com,📂 默认
-  - DOMAIN-SUFFIX,fbcdn.net,📂 默认
-  - DOMAIN-SUFFIX,instagram.com,📂 默认
-  - DOMAIN-SUFFIX,reddit.com,📂 默认
-  - DOMAIN-SUFFIX,linkedin.com,💼 LinkedIn
-  - DOMAIN-SUFFIX,licdn.com,💼 LinkedIn
-  - IP-CIDR6,2001:67c:4e8::/48,📱 WhatsApp Telegram,no-resolve
-  - IP-CIDR6,2001:b28:f23d::/48,📱 WhatsApp Telegram,no-resolve
-  - IP-CIDR6,2001:b28:f23f::/48,📱 WhatsApp Telegram,no-resolve
-  - IP-CIDR6,2606:4700::/32,📂 默认,no-resolve
-  - IP-CIDR6,2400:cb00::/32,📂 默认,no-resolve
-  - IP-CIDR6,2800:3f0::/32,📂 默认,no-resolve
-  - IP-CIDR6,2a00:1450::/32,📂 默认,no-resolve
-  - IP-CIDR6,2620:11a:a000::/40,📂 默认,no-resolve
-  - IP-CIDR6,2401:fa00::/32,📂 默认,no-resolve
-  - GEOSITE,google,🔍 Google YouTube
-  - GEOSITE,youtube,🔍 Google YouTube
-  - GEOSITE,telegram,📱 WhatsApp Telegram
-  - GEOSITE,github,📂 默认
-  - GEOSITE,netflix,🔍 Google YouTube
-  - GEOSITE,tiktok,🎵 TikTok
-  - GEOSITE,apple,DIRECT
-  - GEOSITE,microsoft,DIRECT
-  - GEOSITE,private,DIRECT
-  - GEOSITE,geolocation-!cn,⚡ 自动选择
-  - GEOSITE,cn,DIRECT
-  - MATCH,⚡ 自动选择
+- RULE-SET,Lan,DIRECT
+- GEOIP,CN,DIRECT
+- RULE-SET,China,DIRECT
+- DOMAIN-KEYWORD,qq.com,DIRECT
+- DOMAIN-KEYWORD,weixin,DIRECT
+- DOMAIN-KEYWORD,weibo,DIRECT
+- DOMAIN-KEYWORD,taobao,DIRECT
+- DOMAIN-KEYWORD,alipay,DIRECT
+- DOMAIN-KEYWORD,baidu,DIRECT
+- DOMAIN-KEYWORD,bytedance,DIRECT
+- DOMAIN-KEYWORD,douyin,DIRECT
+- DOMAIN-SUFFIX,aliexpress.com,📂 默认
+- DOMAIN-KEYWORD,alibaba,📂 默认
+- DOMAIN-SUFFIX,1688.com,DIRECT
+- DOMAIN-SUFFIX,amazon.com,📂 默认
+- DOMAIN-SUFFIX,amazonaws.com,📂 默认
+- DOMAIN-SUFFIX,amazon.co.jp,📂 默认
+- DOMAIN-SUFFIX,amazon.co.uk,📂 默认
+- DOMAIN-SUFFIX,amazon.de,📂 默认
+- DOMAIN-SUFFIX,coupang.com,📂 默认
+- DOMAIN-SUFFIX,naver.com,📂 默认
+- DOMAIN-SUFFIX,ruten.com.tw,📂 默认
+- RULE-SET,OpenAI,🤖 ChatGPT Gemini
+- RULE-SET,Gemini,🤖 ChatGPT Gemini
+- RULE-SET,Claude,🤖 ChatGPT Gemini
+- RULE-SET,Copilot,🤖 ChatGPT Gemini
+- DOMAIN-SUFFIX,perplexity.ai,🤖 ChatGPT Gemini
+- RULE-SET,YouTube,🎬 流媒体
+- RULE-SET,Netflix,🎬 流媒体
+- RULE-SET,Disney,🎬 流媒体
+- RULE-SET,HBO,🎬 流媒体
+- RULE-SET,Spotify,🎬 流媒体
+- RULE-SET,WhatsApp,📱 WhatsApp Telegram
+- RULE-SET,Telegram,📱 WhatsApp Telegram
+- RULE-SET,Twitter,📂 默认
+- RULE-SET,Facebook,📂 默认
+- RULE-SET,TikTok,🎵 TikTok
+- RULE-SET,LinkedIn,💼 LinkedIn
+- RULE-SET,GitHub,📂 默认
+- RULE-SET,Google,🔍 Google YouTube
+- RULE-SET,Meta,📂 默认
+- RULE-SET,Apple,DIRECT
+- RULE-SET,Microsoft,DIRECT
+- RULE-SET,Amazon,📂 默认
+- RULE-SET,Steam,📂 默认
+- RULE-SET,GFW,⚡ 自动选择
+- RULE-SET,Proxy,⚡ 自动选择
+- RULE-SET,Global,⚡ 自动选择
+- MATCH,📂 默认
