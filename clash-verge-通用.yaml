@@ -520,6 +520,10 @@ rules:
 - DOMAIN-KEYWORD,bytedance,DIRECT
 - DOMAIN-KEYWORD,douyin,DIRECT
 - DOMAIN-SUFFIX,aliexpress.com,⚡ 自动选择
+# 钉钉 - 必须直连，不走 alibaba 代理规则
+- DOMAIN-SUFFIX,dingtalkapis.com,DIRECT
+- DOMAIN-SUFFIX,dtmbl.com,DIRECT
+- DOMAIN-SUFFIX,dingtalk.com,DIRECT
 - DOMAIN-KEYWORD,alibaba,⚡ 自动选择
 - DOMAIN-SUFFIX,1688.com,DIRECT
 - DOMAIN-SUFFIX,amazon.com,⚡ 自动选择
