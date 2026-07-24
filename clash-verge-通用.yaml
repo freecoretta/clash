@@ -1,6 +1,6 @@
-# Clash Verge Universal Config (v2 - rule-providers)
-# 通用版: include-all + filter 自动适配任何订阅
-# 规则源: blackmatrix7 + Loyalsoldier (与 Clash-Full.ini 保持一致)
+# Clash Verge Universal Config (v3 - individual service groups)
+# Each service has its own proxy group for granular control
+# Rules: blackmatrix7 + Loyalsoldier
 #
 mixed-port: 7890
 allow-lan: false
@@ -24,16 +24,26 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
-  - 📂 默认
-  - 🔍 Google YouTube
-  - 🤖 ChatGPT Gemini
-  - 🎬 流媒体
-  - 📱 WhatsApp Telegram
+  - 🤖 OpenAI
+  - 🤖 Claude
+  - 🤖 Gemini
+  - 🤖 Copilot
+  - 🎬 YouTube
+  - 🎬 Netflix
+  - 🎬 Disney
+  - 🎬 HBO
+  - 🎬 Spotify
+  - 📱 WhatsApp
+  - 📱 Telegram
+  - 🐦 Twitter
+  - 📘 Facebook
   - 💼 LinkedIn
+  - 💻 GitHub
+  - 🔍 Google
   - 🎵 TikTok
   - DIRECT
   - REJECT
-- name: 📂 默认
+- name: 🤖 OpenAI
   type: select
   proxies:
   - 🇭🇰 香港
@@ -49,7 +59,7 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
-- name: 🔍 Google YouTube
+- name: 🤖 Claude
   type: select
   proxies:
   - 🇭🇰 香港
@@ -65,7 +75,7 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
-- name: 🤖 ChatGPT Gemini
+- name: 🤖 Gemini
   type: select
   proxies:
   - 🇭🇰 香港
@@ -81,7 +91,7 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
-- name: 🎬 流媒体
+- name: 🤖 Copilot
   type: select
   proxies:
   - 🇭🇰 香港
@@ -97,7 +107,135 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
-- name: 📱 WhatsApp Telegram
+- name: 🎬 YouTube
+  type: select
+  proxies:
+  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
+- name: 🎬 Netflix
+  type: select
+  proxies:
+  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
+- name: 🎬 Disney
+  type: select
+  proxies:
+  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
+- name: 🎬 HBO
+  type: select
+  proxies:
+  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
+- name: 🎬 Spotify
+  type: select
+  proxies:
+  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
+- name: 📱 WhatsApp
+  type: select
+  proxies:
+  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
+- name: 📱 Telegram
+  type: select
+  proxies:
+  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
+- name: 🐦 Twitter
+  type: select
+  proxies:
+  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
+- name: 📘 Facebook
   type: select
   proxies:
   - 🇭🇰 香港
@@ -114,6 +252,38 @@ proxy-groups:
   - 🌍 其他地区
   - ⚡ 自动选择
 - name: 💼 LinkedIn
+  type: select
+  proxies:
+  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
+- name: 💻 GitHub
+  type: select
+  proxies:
+  - 🇭🇰 香港
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇹🇼 台湾
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国
+  - 🇻🇳 越南
+  - 🇲🇾 马来西亚
+  - 🌏 台日
+  - 🌏 马来越南
+  - 🌏 台日新韩马
+  - 🌍 其他地区
+  - ⚡ 自动选择
+- name: 🔍 Google
   type: select
   proxies:
   - 🇭🇰 香港
@@ -423,41 +593,41 @@ rules:
 - DOMAIN-KEYWORD,baidu,DIRECT
 - DOMAIN-KEYWORD,bytedance,DIRECT
 - DOMAIN-KEYWORD,douyin,DIRECT
-- DOMAIN-SUFFIX,aliexpress.com,📂 默认
-- DOMAIN-KEYWORD,alibaba,📂 默认
+- DOMAIN-SUFFIX,aliexpress.com,⚡ 自动选择
+- DOMAIN-KEYWORD,alibaba,⚡ 自动选择
 - DOMAIN-SUFFIX,1688.com,DIRECT
-- DOMAIN-SUFFIX,amazon.com,📂 默认
-- DOMAIN-SUFFIX,amazonaws.com,📂 默认
-- DOMAIN-SUFFIX,amazon.co.jp,📂 默认
-- DOMAIN-SUFFIX,amazon.co.uk,📂 默认
-- DOMAIN-SUFFIX,amazon.de,📂 默认
-- DOMAIN-SUFFIX,coupang.com,📂 默认
-- DOMAIN-SUFFIX,naver.com,📂 默认
-- DOMAIN-SUFFIX,ruten.com.tw,📂 默认
-- RULE-SET,OpenAI,🤖 ChatGPT Gemini
-- RULE-SET,Gemini,🤖 ChatGPT Gemini
-- RULE-SET,Claude,🤖 ChatGPT Gemini
-- RULE-SET,Copilot,🤖 ChatGPT Gemini
-- DOMAIN-SUFFIX,perplexity.ai,🤖 ChatGPT Gemini
-- RULE-SET,YouTube,🎬 流媒体
-- RULE-SET,Netflix,🎬 流媒体
-- RULE-SET,Disney,🎬 流媒体
-- RULE-SET,HBO,🎬 流媒体
-- RULE-SET,Spotify,🎬 流媒体
-- RULE-SET,WhatsApp,📱 WhatsApp Telegram
-- RULE-SET,Telegram,📱 WhatsApp Telegram
-- RULE-SET,Twitter,📂 默认
-- RULE-SET,Facebook,📂 默认
+- DOMAIN-SUFFIX,amazon.com,⚡ 自动选择
+- DOMAIN-SUFFIX,amazonaws.com,⚡ 自动选择
+- DOMAIN-SUFFIX,amazon.co.jp,⚡ 自动选择
+- DOMAIN-SUFFIX,amazon.co.uk,⚡ 自动选择
+- DOMAIN-SUFFIX,amazon.de,⚡ 自动选择
+- DOMAIN-SUFFIX,coupang.com,⚡ 自动选择
+- DOMAIN-SUFFIX,naver.com,⚡ 自动选择
+- DOMAIN-SUFFIX,ruten.com.tw,⚡ 自动选择
+- RULE-SET,OpenAI,🤖 OpenAI
+- RULE-SET,Claude,🤖 Claude
+- RULE-SET,Gemini,🤖 Gemini
+- RULE-SET,Copilot,🤖 Copilot
+- DOMAIN-SUFFIX,perplexity.ai,🤖 OpenAI
+- RULE-SET,YouTube,🎬 YouTube
+- RULE-SET,Netflix,🎬 Netflix
+- RULE-SET,Disney,🎬 Disney
+- RULE-SET,HBO,🎬 HBO
+- RULE-SET,Spotify,🎬 Spotify
+- RULE-SET,WhatsApp,📱 WhatsApp
+- RULE-SET,Telegram,📱 Telegram
+- RULE-SET,Twitter,🐦 Twitter
+- RULE-SET,Facebook,📘 Facebook
 - RULE-SET,TikTok,🎵 TikTok
 - RULE-SET,LinkedIn,💼 LinkedIn
-- RULE-SET,GitHub,📂 默认
-- RULE-SET,Google,🔍 Google YouTube
-- RULE-SET,Meta,📂 默认
+- RULE-SET,GitHub,💻 GitHub
+- RULE-SET,Google,🔍 Google
+- RULE-SET,Meta,⚡ 自动选择
 - RULE-SET,Apple,DIRECT
 - RULE-SET,Microsoft,DIRECT
-- RULE-SET,Amazon,📂 默认
-- RULE-SET,Steam,📂 默认
+- RULE-SET,Amazon,⚡ 自动选择
+- RULE-SET,Steam,⚡ 自动选择
 - RULE-SET,GFW,⚡ 自动选择
 - RULE-SET,Proxy,⚡ 自动选择
 - RULE-SET,Global,⚡ 自动选择
-- MATCH,📂 默认
+- MATCH,⚡ 自动选择
