@@ -1,5 +1,5 @@
-# Clash Verge Universal Config (v3 - individual service groups)
-# Each service has its own proxy group for granular control
+# Clash Verge Universal Config (v4)
+# Each service has own proxy group
 # Rules: blackmatrix7 + Loyalsoldier
 #
 mixed-port: 7890
@@ -24,15 +24,12 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
+  - 🎯 直选节点
   - 🤖 OpenAI
   - 🤖 Claude
   - 🤖 Gemini
   - 🤖 Copilot
   - 🎬 YouTube
-  - 🎬 Netflix
-  - 🎬 Disney
-  - 🎬 HBO
-  - 🎬 Spotify
   - 📱 WhatsApp
   - 📱 Telegram
   - 🐦 Twitter
@@ -59,6 +56,7 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
+  - 🎯 直选节点
 - name: 🤖 Claude
   type: select
   proxies:
@@ -75,6 +73,7 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
+  - 🎯 直选节点
 - name: 🤖 Gemini
   type: select
   proxies:
@@ -91,6 +90,7 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
+  - 🎯 直选节点
 - name: 🤖 Copilot
   type: select
   proxies:
@@ -107,6 +107,7 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
+  - 🎯 直选节点
 - name: 🎬 YouTube
   type: select
   proxies:
@@ -123,70 +124,7 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
-- name: 🎬 Netflix
-  type: select
-  proxies:
-  - 🇭🇰 香港
-  - 🇯🇵 日本
-  - 🇰🇷 韩国
-  - 🇹🇼 台湾
-  - 🇸🇬 新加坡
-  - 🇺🇸 美国
-  - 🇻🇳 越南
-  - 🇲🇾 马来西亚
-  - 🌏 台日
-  - 🌏 马来越南
-  - 🌏 台日新韩马
-  - 🌍 其他地区
-  - ⚡ 自动选择
-- name: 🎬 Disney
-  type: select
-  proxies:
-  - 🇭🇰 香港
-  - 🇯🇵 日本
-  - 🇰🇷 韩国
-  - 🇹🇼 台湾
-  - 🇸🇬 新加坡
-  - 🇺🇸 美国
-  - 🇻🇳 越南
-  - 🇲🇾 马来西亚
-  - 🌏 台日
-  - 🌏 马来越南
-  - 🌏 台日新韩马
-  - 🌍 其他地区
-  - ⚡ 自动选择
-- name: 🎬 HBO
-  type: select
-  proxies:
-  - 🇭🇰 香港
-  - 🇯🇵 日本
-  - 🇰🇷 韩国
-  - 🇹🇼 台湾
-  - 🇸🇬 新加坡
-  - 🇺🇸 美国
-  - 🇻🇳 越南
-  - 🇲🇾 马来西亚
-  - 🌏 台日
-  - 🌏 马来越南
-  - 🌏 台日新韩马
-  - 🌍 其他地区
-  - ⚡ 自动选择
-- name: 🎬 Spotify
-  type: select
-  proxies:
-  - 🇭🇰 香港
-  - 🇯🇵 日本
-  - 🇰🇷 韩国
-  - 🇹🇼 台湾
-  - 🇸🇬 新加坡
-  - 🇺🇸 美国
-  - 🇻🇳 越南
-  - 🇲🇾 马来西亚
-  - 🌏 台日
-  - 🌏 马来越南
-  - 🌏 台日新韩马
-  - 🌍 其他地区
-  - ⚡ 自动选择
+  - 🎯 直选节点
 - name: 📱 WhatsApp
   type: select
   proxies:
@@ -203,6 +141,7 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
+  - 🎯 直选节点
 - name: 📱 Telegram
   type: select
   proxies:
@@ -219,6 +158,7 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
+  - 🎯 直选节点
 - name: 🐦 Twitter
   type: select
   proxies:
@@ -235,6 +175,7 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
+  - 🎯 直选节点
 - name: 📘 Facebook
   type: select
   proxies:
@@ -251,6 +192,7 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
+  - 🎯 直选节点
 - name: 💼 LinkedIn
   type: select
   proxies:
@@ -267,6 +209,7 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
+  - 🎯 直选节点
 - name: 💻 GitHub
   type: select
   proxies:
@@ -283,6 +226,7 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
+  - 🎯 直选节点
 - name: 🔍 Google
   type: select
   proxies:
@@ -299,6 +243,7 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
+  - 🎯 直选节点
 - name: 🎵 TikTok
   type: select
   proxies:
@@ -315,6 +260,11 @@ proxy-groups:
   - 🌏 台日新韩马
   - 🌍 其他地区
   - ⚡ 自动选择
+  - 🎯 直选节点
+- name: 🎯 直选节点
+  type: select
+  include-all: true
+  exclude-type: direct
 - name: ⚡ 自动选择
   type: url-test
   include-all: true
@@ -521,36 +471,6 @@ rule-providers:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list
     path: ./ruleset/YouTube.yaml
     interval: 86400
-  Disney:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.list
-    path: ./ruleset/Disney.yaml
-    interval: 86400
-  Netflix:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list
-    path: ./ruleset/Netflix.yaml
-    interval: 86400
-  HBO:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBO/HBO.list
-    path: ./ruleset/HBO.yaml
-    interval: 86400
-  Spotify:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.list
-    path: ./ruleset/Spotify.yaml
-    interval: 86400
-  LinkedIn:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/LinkedIn/LinkedIn.list
-    path: ./ruleset/LinkedIn.yaml
-    interval: 86400
   Global:
     type: http
     behavior: classical
@@ -610,10 +530,6 @@ rules:
 - RULE-SET,Copilot,🤖 Copilot
 - DOMAIN-SUFFIX,perplexity.ai,🤖 OpenAI
 - RULE-SET,YouTube,🎬 YouTube
-- RULE-SET,Netflix,🎬 Netflix
-- RULE-SET,Disney,🎬 Disney
-- RULE-SET,HBO,🎬 HBO
-- RULE-SET,Spotify,🎬 Spotify
 - RULE-SET,WhatsApp,📱 WhatsApp
 - RULE-SET,Telegram,📱 Telegram
 - RULE-SET,Twitter,🐦 Twitter
